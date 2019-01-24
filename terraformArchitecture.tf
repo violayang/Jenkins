@@ -14,7 +14,7 @@ resource "oci_core_virtual_network" "VCN" {
   cidr_block     = "10.0.0.0/16"
   dns_label      = "VCN"
   compartment_id = "${var.compartment_ocid}"
-  display_name   = "VCN"
+  display_name   = "yjyVCN"
 }
 
 //Creating Internet and NAT gateways
