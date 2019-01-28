@@ -11,8 +11,8 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout scm
-        sh 'echo $SVC_ACCOUNT_KEY | base64 -d > env-vars'
-        sh '. /var/lib/jenkins/workspace/terraform_demo/env-vars'
+        sh 'echo $SVC_ACCOUNT_KEY | base64 -d > terraform.tfvars'
+        
         
       }
     }
