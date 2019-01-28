@@ -12,7 +12,7 @@ pipeline {
       steps {
         checkout scm
         sh 'echo $SVC_ACCOUNT_KEY | base64 -d > env-vars'
-        sh '. env-vars'
+        
       }
     }
 
