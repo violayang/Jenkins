@@ -6,13 +6,18 @@ variable "compartment_ocid" {}
 variable "region" {}
 
 provider "oci" {
-  auth   = "InstancePrincipal"
+  #auth   = "InstancePrincipal"
+  tenancy_ocid = "${var.tenancy_ocid}"
+  user_ocid = "${var.user_ocid}"
+  fingerprint = "${var.fingerprint}"
+  private_key_path = "${var.private_key_path}"
   region = "${var.region}"
+  
   
 }
 
 # provision bastion instance
-/*
+
 resource "oci_core_instance" "bastionInstance" {
   availability_domain = "XqVg:US-ASHBURN-AD-1"
   compartment_id      = "${var.compartment_ocid}"
@@ -36,4 +41,4 @@ resource "oci_core_instance" "bastionInstance" {
   }
 }
 
-*/
+
