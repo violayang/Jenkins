@@ -17,7 +17,7 @@ provider "oci" {
 }
 
 # provision bastion instance
-
+/*
 resource "oci_core_instance" "bastionInstance" {
   availability_domain = "XqVg:US-ASHBURN-AD-1"
   compartment_id      = "${var.compartment_ocid}"
@@ -42,3 +42,4 @@ resource "oci_core_instance" "bastionInstance" {
 }
 
 
+*/
